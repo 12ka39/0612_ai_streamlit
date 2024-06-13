@@ -16,7 +16,7 @@ st.sidebar.write('선택한 작품은:', user_opt)
 
 # ------- 메인
 st.title('스트림릿의 사이드바')
-folder = 'D:/vsCode_workspace/data/'
+# folder = 'D:/vsCode_workspace/data/'
 image_files = ['Vermeer.png', 'Gogh.png', 'Munch.png', 'ShinYoonbok.png'] # 인덱스 0부터 시작
 
 sel_img_index = sel_opt.index(user_opt) # 내가 선택한 그림의 인덱스를 가져옴
@@ -25,5 +25,6 @@ sel_img_index = sel_opt.index(user_opt) # 내가 선택한 그림의 인덱스�
 st.write(sel_img_index) # 선택한 항목에 맞는 이미지 파일 저장
 
 img_file = image_files[sel_img_index]
-img_local =Image.open(folder + img_file) # PIL 이미지 열기
+img_local =Image.open(img_file)
+# img_local =Image.open(folder + img_file) # PIL 이미지 열기
 st.image(img_local, caption=user_opt) # 이미지 표시
